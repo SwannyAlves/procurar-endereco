@@ -6,11 +6,11 @@
       "dom.iterable",
       "esnext"
     ],
+    "strict": false,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
@@ -21,6 +21,6 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src/react-app-env.d.ts", "src/components", "src/custom.d.ts" 
+    "src/react-app-env.d.ts", "src/components", "src/custom.d.ts, src/assets" 
   ]
 }
