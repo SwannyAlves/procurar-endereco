@@ -1,7 +1,7 @@
 import { useState } from "react";
 import search from "../../assets/search.svg";
 import { useCepContext } from "../../hooks/useContextCep";
-import { CepMask } from "../CepMask";
+import { CepMask } from "../../utils/CepMask";
 import * as S from "./style";
 
 interface SearchProp {

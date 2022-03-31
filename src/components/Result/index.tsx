@@ -1,5 +1,5 @@
 import { useCepContext } from "../../hooks/useContextCep";
-import { CepMask } from "../CepMask";
+import { CepMask } from "../../utils/CepMask";
 import { Search } from "../Search";
 import * as S from "./style";
 
