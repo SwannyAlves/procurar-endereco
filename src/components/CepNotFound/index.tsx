@@ -9,9 +9,10 @@ export const CepNaoEncontrado = () => {
   return (
     <S.CepNaoEncontradoContainer>
       <p>
-        <span>Ops!</span> Não foi possível encontrar dados sobre o CEP{" "}
-        {CepMask(cepNumberNoExist)}
+        <span>Ops!</span> Não foi possível encontrar dados sobre o{" "}
+        <span> CEP {CepMask(cepNumberNoExist)}</span>
       </p>
+      <hr />
       <Search title={"Quer buscar um novo endereço?"} />
     </S.CepNaoEncontradoContainer>
   );

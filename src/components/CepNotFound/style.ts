@@ -10,8 +10,9 @@ export const CepNaoEncontradoContainer = styled.div`
     hr{
         margin-top: 20px;  
         border-width: 0; 
-	height: 1px;
-	border-top-width: 1px      
+        height: 1px;
+        border-top-width: 1px;
+        margin-bottom: 20px;
     }
     #lastLine{
         margin-bottom: 20px;
@@ -21,6 +22,7 @@ export const CepNaoEncontradoContainer = styled.div`
     }
     p{
         padding: 1.875rem 0 0 0;
+       text-align: center;
     }
     p:first-child{
         padding-top: 0;
