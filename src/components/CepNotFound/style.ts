@@ -8,6 +8,9 @@ export const CepNaoEncontradoContainer = styled.div`
     border-radius: 10px;
     padding: 60px;
     margin: auto;
+    @media (max-width: 720px) { 
+        padding: 30px; 
+    }
 
 
     hr{
