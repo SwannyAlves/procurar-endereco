@@ -12,21 +12,22 @@ export const Search = ({ title }: SearchProp) => {
   const [cepMask, setCepMask] = useState("");
   const { setCepData } = useCepContext();
 
-  function MaskCep(e: { target: { value: string } }) {
+  const MaskCep = (e: { target: { value: string } }) => {
     const { value } = e.target;
     setCepMask(CepMask(value));
-  }
+  };
 
-  function handleSubmit() {
+  const handleSubmit = () => {
     const cepNoMask = cepMask.replace(/\D/g, "");
     setCepData(cepNoMask);
-  }
+  };
 
-  function handleKeyPress(event) {
+  const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       handleSubmit();
     }
-  }
+  };
+
   return (
     <S.SearchContainer>
       <label>{title}</label>

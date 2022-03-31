@@ -1,7 +1,7 @@
 import { Home } from "./components/Home";
 import CepContextProvider from "./context/ContextCep";
 
-export function App() {
+export const App = () => {
   return (
     <div className="App">
       <>
@@ -11,5 +11,4 @@ export function App() {
       </>
     </div>
   );
-  // }
-}
+};
