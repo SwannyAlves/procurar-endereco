@@ -1,4 +1,4 @@
-import { Home } from "./components/Home";
+import { Home } from "./pages/Home";
 import CepContextProvider from "./context/ContextCep";
 
 export const App = () => {
