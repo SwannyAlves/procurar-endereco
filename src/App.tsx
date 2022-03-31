@@ -1,13 +1,15 @@
-import React from "react";
-import { useCep } from "./services/api";
-import { GlobalStyle } from "./styles/global";
+import { Home } from "./components/Home";
+import CepContextProvider from "./context/ContextCep";
 
 export function App() {
   return (
     <div className="App">
       <>
-        <GlobalStyle />
+        <CepContextProvider>
+          <Home />
+        </CepContextProvider>
       </>
     </div>
   );
+  // }
 }
