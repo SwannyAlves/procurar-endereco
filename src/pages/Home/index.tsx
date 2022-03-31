@@ -1,14 +1,12 @@
-import { useCepContext } from "../../hooks/useContextCep";
+import { CardSearch } from "../../components/CardSearch";
 import { CepNaoEncontrado } from "../../components/CepNotFound";
 import { Result } from "../../components/Result";
-import { Search } from "../../components/Search";
+import { useCepContext } from "../../hooks/useContextCep";
 export const Home = () => {
   const { cep, primeiraInteracao, cepError, cepExist } = useCepContext();
   return (
     <>
-      {primeiraInteracao && !cepExist && !cepError && (
-        <Search title={"Quer buscar um novo endereço?"} />
-      )}
+      {primeiraInteracao && !cepExist && !cepError && <CardSearch />}
       {cep && cepExist && <Result />}
       {cepError && !cepExist && primeiraInteracao && <CepNaoEncontrado />}
     </>
