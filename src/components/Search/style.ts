@@ -4,6 +4,7 @@ export const SearchContainer = styled.div`
   label {
     display: flex;
     justify-content: center;
+    margin-bottom: 15px;
   }
 `;
 

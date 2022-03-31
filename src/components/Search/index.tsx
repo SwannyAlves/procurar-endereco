@@ -1,19 +1,25 @@
 import { useState } from "react";
 import search from "../../assets/search.svg";
+import { useCepContext } from "../../hooks/useContextCep";
 import { CepMask } from "../CepMask";
 import * as S from "./style";
 
-export const Search = () => {
-  const [cepMask, setCepMask] = useState("");
+interface SearchProp {
+  title: string;
+}
 
-  function handleMaskCep(e: { target: { value: string } }) {
+export const Search = ({ title }: SearchProp) => {
+  const [cepMask, setCepMask] = useState("");
+  const { setCepData } = useCepContext();
+
+  function MaskCep(e: { target: { value: string } }) {
     const { value } = e.target;
     setCepMask(CepMask(value));
   }
 
   function handleSubmit() {
     const cepNoMask = cepMask.replace(/\D/g, "");
-    console.log(cepNoMask);
+    setCepData(cepNoMask);
   }
 
   function handleKeyPress(event) {
@@ -23,11 +29,11 @@ export const Search = () => {
   }
   return (
     <S.SearchContainer>
-      <label>Está buscando um endereço?</label>
+      <label>{title}</label>
       <S.Search>
         <S.SearchInput
           name="cep"
-          onChange={handleMaskCep}
+          onChange={MaskCep}
           onKeyPress={handleKeyPress}
           placeholder="Insira um cep"
           value={cepMask}
