@@ -62,11 +62,11 @@ git clone https://github.com/SwannyAlves/procurar-endereco
 Instale as dependências rodando o comando
 
 ```sh
-npm install
+yarn install
 ```
 
 Digite o comando para ligar o servidor
 
 ```JS
-npm start
+yarn start
 ```
